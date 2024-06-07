@@ -25,6 +25,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForGreetTest")
     void greet(String expected) {
+
         Assertions.assertEquals(expected, calculatorService.greet());
     }
 
@@ -50,6 +51,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForPlusNullPointerTest")
     void plusTestForExceptions(Integer num1, Integer num2) {
+
         Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.plus(num1, num2));
     }
 
@@ -80,6 +82,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForMinusNullPointerTest")
     void minusTestForExceptions(Integer num1, Integer num2) {
+
         Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.minus(num1, num2));
     }
 
@@ -109,6 +112,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForMultiplyNullPointerTest")
     void multiplyTestForExceptions(Integer num1, Integer num2) {
+
         Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.multiply(num1, num2));
     }
 
@@ -138,6 +142,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForDivideNullPointerTest")
     void divideTestForExceptions(Integer num1, Integer num2) {
+
         Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.divide(num1, num2));
     }
 
