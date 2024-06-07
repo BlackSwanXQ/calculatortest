@@ -45,7 +45,7 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     private void checkNull(Integer num1, Integer num2) {
         if (num1 == null || num2 == null) {
-            throw new NullPointerException("The parameter num1 or num2 is null!");
+            throw new IllegalArgumentException("The parameter num1 or num2 is null!");
         }
     }
 

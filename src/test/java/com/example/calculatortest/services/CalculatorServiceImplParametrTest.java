@@ -23,12 +23,12 @@ public class CalculatorServiceImplParametrTest {
 
     @ParameterizedTest
     @MethodSource("provideParamsForGreetTest")
-    void greet(String expected, String greet) {
-        Assertions.assertEquals(expected, greet);
+    void greet(String expected) {
+        Assertions.assertEquals(expected, calculatorService.greet());
     }
 
     public static Stream<Arguments> provideParamsForGreetTest() {
-        return Stream.of(Arguments.of("Добро пожаловать в калькулятор", "Добро пожаловать в калькулятор"));
+        return Stream.of(Arguments.of("<h1> Добро пожаловать в калькулятор!</h1>"));
     }
 
     @ParameterizedTest
