@@ -49,7 +49,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForPlusNullPointerTest")
     void plusTestForExceptions(Integer num1, Integer num2) {
-        Assertions.assertThrows(NullPointerException.class, () -> calculatorService.plus(num1, num2));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.plus(num1, num2));
     }
 
     public static Stream<Arguments> provideParamsForPlusNullPointerTest() {
@@ -79,7 +79,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForMinusNullPointerTest")
     void minusTestForExceptions(Integer num1, Integer num2) {
-        Assertions.assertThrows(NullPointerException.class, () -> calculatorService.minus(num1, num2));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.minus(num1, num2));
     }
 
     public static Stream<Arguments> provideParamsForMinusNullPointerTest() {
@@ -108,7 +108,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForMultiplyNullPointerTest")
     void multiplyTestForExceptions(Integer num1, Integer num2) {
-        Assertions.assertThrows(NullPointerException.class, () -> calculatorService.multiply(num1, num2));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.multiply(num1, num2));
     }
 
     public static Stream<Arguments> provideParamsForMultiplyNullPointerTest() {
@@ -137,7 +137,7 @@ public class CalculatorServiceImplParametrTest {
     @ParameterizedTest
     @MethodSource("provideParamsForDivideNullPointerTest")
     void divideTestForExceptions(Integer num1, Integer num2) {
-        Assertions.assertThrows(NullPointerException.class, () -> calculatorService.divide(num1, num2));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> calculatorService.divide(num1, num2));
     }
 
     public static Stream<Arguments> provideParamsForDivideNullPointerTest() {
